@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Events & Dining | By The Falls By CM Valley</title>
+  <meta name="description" content="Host your dream event at By The Falls — birthdays, weddings, corporate dinners, and private dining experiences in a luxury setting in Ludhiana, Punjab." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero-bg {
+      background:
+        linear-gradient(to bottom, rgba(10,10,10,0.5), rgba(10,10,10,0.78)),
+        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=80') center/cover;
+    }
+    /* Packages Section */
+    .packages {
+      padding: 100px 5%;
+      background: var(--charcoal);
+      text-align: center;
+    }
+    .packages-inner { max-width: 1200px; margin: 0 auto; }
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 60px;
+    }
+    .pkg-card {
+      background: var(--charcoal-2);
+      border-radius: var(--radius-lg);
+      padding: 40px 30px;
+      border: 1px solid var(--charcoal-3);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .pkg-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .pkg-card:hover::before { transform: scaleX(1); }
+    .pkg-card:hover { border-color: var(--glass-border); transform: translateY(-8px); box-shadow: var(--shadow-gold); }
+    .pkg-card.featured { border-color: var(--gold); }
+    .pkg-card.featured::before { transform: scaleX(1); }
+    .pkg-badge {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+    .pkg-icon { font-size: 2.4rem; color: var(--gold); margin-bottom: 18px; }
+    .pkg-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .pkg-desc { font-size: 0.82rem; color: var(--white-dim); line-height: 1.75; margin-bottom: 24px; }
+    .pkg-includes {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 28px;
+    }
+    .pkg-includes li {
+      font-size: 0.8rem;
+      color: var(--white-dim);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--charcoal-3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pkg-includes li i { color: var(--gold); font-size: 0.7rem; }
+    .pkg-price {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .pkg-price span { font-size: 0.72rem; color: var(--white-dim); }
+
+    /* Venue Section */
+    .venue {
+      padding: 100px 5%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .venue-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .venue-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      min-height: 340px;
+      cursor: pointer;
+    }
+    .venue-card img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+      position: absolute; inset: 0;
+    }
+    .venue-card:hover img { transform: scale(1.08); }
+    .venue-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.2) 55%);
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+    .venue-cap {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .venue-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .venue-card p { font-size: 0.78rem; color: var(--white-dim); line-height: 1.6; }
+    .venue-meta {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .venue-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white-dim);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .venue-tag i { color: var(--gold); }
+
+    /* Process Steps */
+    .process {
+      padding: 100px 5%;
+      background: var(--charcoal);
+      text-align: center;
+    }
+    .process-inner { max-width: 1100px; margin: 0 auto; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+      position: relative;
+    }
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 36px; left: 12.5%; right: 12.5%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.4;
+    }
+    .step-card { text-align: center; position: relative; }
+    .step-num {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--charcoal-2);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--gold);
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 2;
+      transition: var(--transition);
+    }
+    .step-card:hover .step-num { background: var(--gold); color: var(--black); }
+    .step-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .step-card p { font-size: 0.8rem; color: var(--white-dim); line-height: 1.65; }
+
+    /* FAQ */
+    .faq {
+      padding: 80px 5%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--charcoal-3);
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      padding: 22px 0;
+      text-align: left;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 400;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      transition: color 0.3s;
+    }
+    .faq-q:hover { color: var(--gold); }
+    .faq-q i {
+      color: var(--gold);
+      transition: transform 0.4s ease;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-q i { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 20px; }
+    .faq-a p { font-size: 0.85rem; color: var(--white-dim); line-height: 1.8; }
+
+    @media(max-width: 900px) {
+      .packages-grid { grid-template-columns: 1fr; }
+      .venue-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid::before { display: none; }
+    }
+    @media(max-width: 520px) {
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-logo">By The Falls</div><div class="loader-bar"></div></div>
+<div class="page-transition"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo"><a href="index.html"><span class="logo-script">By The Falls</span><span class="logo-sub">By CM Valley · Ludhiana</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li>
+    <li><a href="events.html" class="active">Events</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html#reserve" class="nav-reserve">Reserve a Table</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<nav class="mobile-nav">
+  <div class="mobile-gold-line"></div>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a><a href="events.html">Events</a><a href="contact.html">Contact</a>
+  <div class="mobile-gold-line"></div>
+  <a href="contact.html#reserve" style="color:var(--gold)">Reserve a Table</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="height:70vh;">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="section-label">Make Every Occasion Extraordinary</div>
+    <h1>Private <em style="font-style:italic;color:var(--gold)">Events</em></h1>
+    <p>Unforgettable celebrations crafted just for you</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span style="color:var(--gold);margin:0 6px">/</span>
+      <span>Events</span>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS GRID -->
+<section class="events-section" aria-labelledby="events-title">
+  <div class="reveal" style="text-align:center;">
+    <div class="section-label">Celebrations We Host</div>
+    <h2 class="section-title" id="events-title">Every Occasion Deserves a <em>Grand Stage</em></h2>
+    <div class="gold-divider"></div>
+    <p class="section-desc" style="margin:0 auto;">From intimate candlelit dinners to grand wedding receptions — we transform your vision into a breathtaking reality.</p>
+  </div>
+
+  <div class="events-grid">
+    <div class="event-card reveal">
+      <div class="event-bg" style="background-image:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80')"></div>
+      <div class="event-overlay">
+        <div class="event-icon"><i class="fas fa-birthday-cake"></i></div>
+        <h3>Birthday Celebrations</h3>
+        <p>Make your birthday the most unforgettable chapter of the year. We craft custom decorations, cakes, and menus tailored entirely to you — because you deserve nothing less than extraordinary.</p>
+        <div class="event-features">
+          <span class="event-tag">Custom Décor</span>
+          <span class="event-tag">Personalized Cake</span>
+          <span class="event-tag">Dedicated Butler</span>
+          <span class="event-tag">Photography Setup</span>
+        </div>
+        <a href="contact.html" class="btn-outline">Plan My Birthday</a>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-bg" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80')"></div>
+      <div class="event-overlay">
+        <div class="event-icon"><i class="fas fa-rings-wedding"></i></div>
+        <h3>Wedding Celebrations</h3>
+        <p>Your love story deserves the most beautiful backdrop. Our waterfall setting provides a naturally romantic canvas for receptions, rehearsal dinners, and intimate wedding ceremonies.</p>
+        <div class="event-features">
+          <span class="event-tag">Floral Arrangements</span>
+          <span class="event-tag">Customised Menu</span>
+          <span class="event-tag">Live Music</span>
+          <span class="event-tag">Bridal Suite Access</span>
+        </div>
+        <a href="contact.html" class="btn-outline">Plan My Wedding</a>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-bg" style="background-image:url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&q=80')"></div>
+      <div class="event-overlay">
+        <div class="event-icon"><i class="fas fa-briefcase"></i></div>
+        <h3>Corporate Dinners</h3>
+        <p>Impress your clients and colleagues with a dining experience that speaks volumes. Our private rooms offer absolute discretion, premium service, and menus that close deals.</p>
+        <div class="event-features">
+          <span class="event-tag">AV Equipment</span>
+          <span class="event-tag">Private Room</span>
+          <span class="event-tag">Business Lunch Menu</span>
+          <span class="event-tag">Valet Parking</span>
+        </div>
+        <a href="contact.html" class="btn-outline">Plan Corporate Event</a>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-bg" style="background-image:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&q=80')"></div>
+      <div class="event-overlay">
+        <div class="event-icon"><i class="fas fa-users"></i></div>
+        <h3>Family Gatherings</h3>
+        <p>Reconnect with the people who matter most in an environment of warmth, luxury, and natural beauty. We accommodate family gatherings of all sizes with grace and joy.</p>
+        <div class="event-features">
+          <span class="event-tag">Group Menus</span>
+          <span class="event-tag">Kids' Corner</span>
+          <span class="event-tag">Outdoor Seating</span>
+          <span class="event-tag">Group Photography</span>
+        </div>
+        <a href="contact.html" class="btn-outline">Plan Family Gathering</a>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-bg" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80')"></div>
+      <div class="event-overlay">
+        <div class="event-icon"><i class="fas fa-heart"></i></div>
+        <h3>Romantic Private Dining</h3>
+        <p>A table for two in a world of your own. Complete privacy, rose petals, champagne on arrival, and a customised seven-course tasting menu — the ultimate romantic gesture.</p>
+        <div class="event-features">
+          <span class="event-tag">Rose Petal Setup</span>
+          <span class="event-tag">7-Course Menu</span>
+          <span class="event-tag">Private Waterfall View</span>
+          <span class="event-tag">Complimentary Wine</span>
+        </div>
+        <a href="contact.html" class="btn-outline">Plan Romantic Dinner</a>
+      </div>
+    </div>
+
+    <div class="event-card reveal">
+      <div class="event-bg" style="background-image:url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=900&q=80')"></div>
+      <div class="event-overlay">
+        <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
+        <h3>Social Celebrations</h3>
+        <p>Graduations, anniversaries, retirements, baby showers — every milestone deserves a celebration. Our team specialises in making every social occasion feel genuinely special.</p>
+        <div class="event-features">
+          <span class="event-tag">Themed Décor</span>
+          <span class="event-tag">Cocktail Reception</span>
+          <span class="event-tag">Live Entertainment</span>
+          <span class="event-tag">Memory Wall</span>
+        </div>
+        <a href="contact.html" class="btn-outline">Plan My Celebration</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages">
+  <div class="packages-inner">
+    <div class="reveal">
+      <div class="section-label">Event Packages</div>
+      <h2 class="section-title">Choose Your <em>Perfect Package</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-desc" style="margin:0 auto;">Transparent pricing, premium inclusions. Every package is customisable to suit your unique vision.</p>
+    </div>
+    <div class="packages-grid">
+      <div class="pkg-card reveal">
+        <div class="pkg-icon"><i class="fas fa-moon"></i></div>
+        <div class="pkg-name">Intimate Evening</div>
+        <div class="pkg-desc">Perfect for romantic dinners and small gatherings up to 10 guests in our exclusive private alcove.</div>
+        <ul class="pkg-includes">
+          <li><i class="fas fa-check"></i> Private table setting with candles</li>
+          <li><i class="fas fa-check"></i> 3-course set dinner menu</li>
+          <li><i class="fas fa-check"></i> Welcome mocktail for two</li>
+          <li><i class="fas fa-check"></i> Dedicated personal server</li>
+          <li><i class="fas fa-check"></i> Complimentary dessert platter</li>
+        </ul>
+        <div class="pkg-price">Starting ₹2,500 <span>per person</span></div>
+        <a href="contact.html" class="btn-outline" style="width:100%;justify-content:center;">Enquire Now</a>
+      </div>
+
+      <div class="pkg-card featured reveal">
+        <div class="pkg-badge">Most Popular</div>
+        <div class="pkg-icon"><i class="fas fa-crown"></i></div>
+        <div class="pkg-name">Grand Celebration</div>
+        <div class="pkg-desc">Ideal for birthdays, anniversaries, and family events from 20 to 80 guests in our main hall.</div>
+        <ul class="pkg-includes">
+          <li><i class="fas fa-check"></i> Custom floral décor &amp; theme</li>
+          <li><i class="fas fa-check"></i> 5-course curated menu</li>
+          <li><i class="fas fa-check"></i> Welcome drinks for all guests</li>
+          <li><i class="fas fa-check"></i> Live music or DJ (2 hours)</li>
+          <li><i class="fas fa-check"></i> Personalised celebration cake</li>
+          <li><i class="fas fa-check"></i> Event coordinator on-site</li>
+          <li><i class="fas fa-check"></i> Complimentary photography setup</li>
+        </ul>
+        <div class="pkg-price">Starting ₹1,800 <span>per person</span></div>
+        <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;"><span>Enquire Now</span></a>
+      </div>
+
+      <div class="pkg-card reveal">
+        <div class="pkg-icon"><i class="fas fa-gem"></i></div>
+        <div class="pkg-name">Royal Wedding</div>
+        <div class="pkg-desc">The ultimate wedding experience for 80–300 guests — a complete luxury wedding package by the falls.</div>
+        <ul class="pkg-includes">
+          <li><i class="fas fa-check"></i> Full venue buyout available</li>
+          <li><i class="fas fa-check"></i> Custom multi-cuisine buffet</li>
+          <li><i class="fas fa-check"></i> Complete décor &amp; florals</li>
+          <li><i class="fas fa-check"></i> Bridal suite access</li>
+          <li><i class="fas fa-check"></i> Live band / DJ all evening</li>
+          <li><i class="fas fa-check"></i> Professional photography</li>
+        </ul>
+        <div class="pkg-price">Custom Quote <span>based on guest count</span></div>
+        <a href="contact.html" class="btn-outline" style="width:100%;justify-content:center;">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE SPACES -->
+<section class="venue" aria-labelledby="venue-title">
+  <div class="reveal" style="text-align:center;">
+    <div class="section-label">Our Spaces</div>
+    <h2 class="section-title" id="venue-title">Discover Our <em>Stunning Venues</em></h2>
+    <div class="gold-divider"></div>
+  </div>
+  <div class="venue-grid">
+    <div class="venue-card reveal">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Main Dining Hall" loading="lazy" />
+      <div class="venue-overlay">
+        <div class="venue-cap">Main Hall</div>
+        <h3>The Grand Dining Hall</h3>
+        <p>Our signature space — soaring ceilings, warm lighting, and panoramic nature views.</p>
+        <div class="venue-meta">
+          <span class="venue-tag"><i class="fas fa-users"></i> Up to 200 Guests</span>
+          <span class="venue-tag"><i class="fas fa-expand"></i> 4,000 sq ft</span>
+        </div>
+      </div>
+    </div>
+    <div class="venue-card reveal">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Private Dining" loading="lazy" />
+      <div class="venue-overlay">
+        <div class="venue-cap">Private Room</div>
+        <h3>The Alcove Suite</h3>
+        <p>An intimate private dining room for exclusive gatherings and confidential conversations.</p>
+        <div class="venue-meta">
+          <span class="venue-tag"><i class="fas fa-users"></i> Up to 20 Guests</span>
+          <span class="venue-tag"><i class="fas fa-lock"></i> Full Privacy</span>
+        </div>
+      </div>
+    </div>
+    <div class="venue-card reveal">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Outdoor Terrace" loading="lazy" />
+      <div class="venue-overlay">
+        <div class="venue-cap">Outdoor Terrace</div>
+        <h3>The Waterfall Terrace</h3>
+        <p>Al-fresco dining beside the cascading falls — nature's own backdrop, unmatched and magical.</p>
+        <div class="venue-meta">
+          <span class="venue-tag"><i class="fas fa-users"></i> Up to 80 Guests</span>
+          <span class="venue-tag"><i class="fas fa-water"></i> Waterfall View</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process">
+  <div class="process-inner">
+    <div class="reveal">
+      <div class="section-label">Our Process</div>
+      <h2 class="section-title">Planning Your Event in <em>4 Simple Steps</em></h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">01</div>
+        <h4>Get in Touch</h4>
+        <p>Call us or fill out our enquiry form. Tell us about your event — type, size, date, and your vision.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">02</div>
+        <h4>Consultation</h4>
+        <p>Our dedicated events team meets with you — in person or virtually — to understand every detail.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">03</div>
+        <h4>Custom Proposal</h4>
+        <p>We craft a bespoke proposal including menu, décor, timeline, and a transparent quote within 48 hours.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">04</div>
+        <h4>Celebrate!</h4>
+        <p>Sit back and enjoy. Our team handles every detail on the day so you can be fully present in the moment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:60px 5%; background:var(--black);">
+  <div class="faq">
+    <div class="reveal" style="text-align:center; margin-bottom:50px;">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How far in advance should I book an event? <i class="fas fa-plus"></i></button>
+      <div class="faq-a"><p>We recommend booking at least 4–6 weeks in advance for smaller events and 3–6 months for weddings and large celebrations to ensure your preferred date is available and allow time for planning.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Can I customise the menu for dietary requirements? <i class="fas fa-plus"></i></button>
+      <div class="faq-a"><p>Absolutely. Our chefs can accommodate vegetarian, vegan, gluten-free, Jain, and other dietary requirements. Simply inform us during the planning stage and we'll create a menu everyone can enjoy.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is there a minimum spend for private dining? <i class="fas fa-plus"></i></button>
+      <div class="faq-a"><p>Our Intimate Evening package starts at ₹2,500 per person with a minimum of 6 guests for the private alcove. Larger venue spaces have different minimum spends — please contact us for details.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you allow outside decorators or florists? <i class="fas fa-plus"></i></button>
+      <div class="faq-a"><p>Yes, we welcome your personal decorators and florists. We simply ask for a brief coordination call with our team to ensure smooth setup. We also have preferred vendors who know our spaces beautifully.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What is your cancellation and refund policy? <i class="fas fa-plus"></i></button>
+      <div class="faq-a"><p>Cancellations made 30+ days prior to the event receive a full refund of the deposit. Cancellations within 30 days are subject to a 50% retention. Rescheduling requests are handled with flexibility wherever possible.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is valet parking available for events? <i class="fas fa-plus"></i></button>
+      <div class="faq-a"><p>Yes, complimentary valet parking is available for all private events. We also have ample self-parking on the premises. Please inform us of expected vehicle count during planning.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS CTA -->
+<section class="events-cta">
+  <div class="events-cta-inner reveal">
+    <div class="section-label">Ready to Begin?</div>
+    <h2 class="section-title" style="font-size:clamp(2rem,5vw,3.5rem);">Let's Create Something <em>Extraordinary</em> Together</h2>
+    <div class="gold-divider"></div>
+    <p class="section-desc" style="margin:0 auto 2.5rem;">Our events team is ready to turn your dream into an evening that your guests will talk about for years to come.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn-primary"><span>Start Planning</span> <i class="fas fa-arrow-right"></i></a>
+      <a href="tel:7829166666" class="btn-outline"><i class="fas fa-phone"></i> <span>+91 78291 66666</span></a>
+    </div>
+    <a href="https://wa.me/917829166666?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20hosting%20an%20event%20at%20By%20The%20Falls." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" style="margin-top:20px;display:inline-flex;">
+      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-logo">
+      <div class="logo-script">By The Falls</div>
+      <div class="logo-tagline">By CM Valley · Ludhiana</div>
+      <p>A haven of fine dining where nature's grandeur meets culinary artistry. Join us for an evening you'll treasure forever.</p>
+      <div class="footer-social">
+        <a href="#" class="soc-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="soc-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="soc-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/917829166666" class="soc-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Our Menu</a></li><li><a href="gallery.html">Gallery</a></li>
+      <li><a href="events.html">Private Events</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Events We Host</h5><ul>
+      <li><a href="events.html">Birthday Parties</a></li>
+      <li><a href="events.html">Weddings</a></li>
+      <li><a href="events.html">Corporate Dinners</a></li>
+      <li><a href="events.html">Family Gatherings</a></li>
+      <li><a href="events.html">Romantic Dining</a></li>
+      <li><a href="events.html">Social Celebrations</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Contact</h5>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>CM Valley Jainpur Enclave,<br>Ludhiana, Punjab 141008</span></div>
+      <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:7829166666" style="color:inherit">+91 78291 66666</a></span></div>
+      <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon – Sun: 12:00 PM – 11:30 PM</span></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>events@bythefalls.in</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 By The Falls By CM Valley. All Rights Reserved.</p>
+    <p>Crafted with <i class="fas fa-heart" style="color:var(--gold)"></i> in Ludhiana, Punjab</p>
+  </div>
+</footer>
+
+<div class="float-btns">
+  <a href="contact.html#reserve" class="float-btn reserve" aria-label="Reserve">Reserve</a>
+  <a href="https://wa.me/917829166666" class="float-btn whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:7829166666" class="float-btn call"><i class="fas fa-phone"></i></a>
+</div>
+<button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="script.js"></script>
+<script>
+  // FAQ Accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

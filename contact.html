@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Reservations | By The Falls By CM Valley</title>
+  <meta name="description" content="Contact By The Falls By CM Valley — book a table, plan an event, or simply get in touch. Located in CM Valley Jainpur Enclave, Ludhiana, Punjab 141008." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero-bg {
+      background:
+        linear-gradient(to bottom, rgba(10,10,10,0.5), rgba(10,10,10,0.78)),
+        url('https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=1920&q=80') center/cover;
+    }
+
+    /* ── Quick Action Buttons ── */
+    .quick-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 50px 5% 0;
+    }
+    .quick-action {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--charcoal);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 20px 30px;
+      transition: var(--transition);
+      flex: 1;
+      min-width: 200px;
+      max-width: 280px;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .quick-action:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: var(--shadow-gold); }
+    .qa-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--gold-glow);
+      border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: var(--gold);
+      flex-shrink: 0;
+    }
+    .qa-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .qa-value { font-size: 0.88rem; color: var(--white); font-weight: 400; }
+
+    /* ── Reservation Banner ── */
+    .reserve-banner {
+      margin: 60px 5% 0;
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 44px 50px;
+      background: linear-gradient(135deg, var(--charcoal-2), var(--charcoal-3));
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--glass-border);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+    .reserve-banner h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .reserve-banner p { font-size: 0.85rem; color: var(--white-dim); }
+    .reserve-banner-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    @media(max-width: 768px) {
+      .reserve-banner { grid-template-columns: 1fr; padding: 30px; }
+    }
+
+    /* ── Social Contact ── */
+    .social-contact {
+      padding: 70px 5%;
+      background: var(--charcoal);
+      text-align: center;
+    }
+    .social-contact-inner { max-width: 800px; margin: 0 auto; }
+    .soc-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .soc-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 28px 36px;
+      background: var(--charcoal-2);
+      border: 1px solid var(--charcoal-3);
+      border-radius: var(--radius-lg);
+      transition: var(--transition);
+      text-decoration: none;
+      color: inherit;
+      min-width: 130px;
+    }
+    .soc-card:hover { border-color: var(--gold); transform: translateY(-6px); }
+    .soc-card i { font-size: 1.8rem; }
+    .soc-card span { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white-dim); }
+    .soc-card.fb i { color: #1877F2; }
+    .soc-card.ig i { color: #E4405F; }
+    .soc-card.wa i { color: #25D366; }
+    .soc-card.yt i { color: #FF0000; }
+    .soc-card.tw i { color: #1DA1F2; }
+  </style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-logo">By The Falls</div><div class="loader-bar"></div></div>
+<div class="page-transition"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo"><a href="index.html"><span class="logo-script">By The Falls</span><span class="logo-sub">By CM Valley · Ludhiana</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li>
+    <li><a href="events.html">Events</a></li><li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="#reserve" class="nav-reserve">Reserve a Table</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<nav class="mobile-nav">
+  <div class="mobile-gold-line"></div>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a><a href="events.html">Events</a><a href="contact.html">Contact</a>
+  <div class="mobile-gold-line"></div>
+  <a href="#reserve" style="color:var(--gold)">Reserve a Table</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="section-label">We'd Love to Hear From You</div>
+    <h1>Get in <em style="font-style:italic;color:var(--gold)">Touch</em></h1>
+    <p>Reservations · Events · Enquiries</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span style="color:var(--gold);margin:0 6px">/</span>
+      <span>Contact</span>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK ACTIONS -->
+<div class="quick-actions">
+  <a href="tel:7829166666" class="quick-action reveal">
+    <div class="qa-icon"><i class="fas fa-phone"></i></div>
+    <div>
+      <div class="qa-label">Call Us</div>
+      <div class="qa-value">+91 78291 66666</div>
+    </div>
+  </a>
+  <a href="https://wa.me/917829166666" class="quick-action reveal" target="_blank" rel="noopener noreferrer">
+    <div class="qa-icon" style="border-color:rgba(37,211,102,0.3);background:rgba(37,211,102,0.08)"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+    <div>
+      <div class="qa-label">WhatsApp</div>
+      <div class="qa-value">Chat with us now</div>
+    </div>
+  </a>
+  <a href="https://maps.app.goo.gl/S4bcuPQvybGiAJhJ7" class="quick-action reveal" target="_blank" rel="noopener noreferrer">
+    <div class="qa-icon"><i class="fas fa-map-marker-alt"></i></div>
+    <div>
+      <div class="qa-label">Find Us</div>
+      <div class="qa-value">Get Directions</div>
+    </div>
+  </a>
+  <a href="mailto:hello@bythefalls.in" class="quick-action reveal">
+    <div class="qa-icon"><i class="fas fa-envelope"></i></div>
+    <div>
+      <div class="qa-label">Email Us</div>
+      <div class="qa-value">hello@bythefalls.in</div>
+    </div>
+  </a>
+</div>
+
+<!-- RESERVATION BANNER -->
+<div class="reserve-banner reveal" id="reserve">
+  <div>
+    <div class="section-label" style="margin-bottom:10px;">Book a Table</div>
+    <h3>Reserve Your Table at <em style="font-style:italic;color:var(--gold)">By The Falls</em></h3>
+    <p>For same-day reservations, please call us directly. For advance bookings, use the form below.</p>
+  </div>
+  <div class="reserve-banner-actions">
+    <a href="tel:7829166666" class="btn-primary"><i class="fas fa-phone"></i><span>Call Now</span></a>
+    <a href="https://wa.me/917829166666?text=Hello%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20By%20The%20Falls." target="_blank" rel="noopener noreferrer" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Reserve via WhatsApp</a>
+  </div>
+</div>
+
+<!-- MAIN CONTACT SECTION -->
+<section class="contact-section" style="padding-top:60px;">
+
+  <!-- INFO CARD -->
+  <div class="contact-info-card reveal-left">
+    <div class="section-label" style="margin-bottom:24px;">Restaurant Info</div>
+
+    <div class="contact-info-item">
+      <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+      <div>
+        <div class="ci-label">Address</div>
+        <div class="ci-value">CM Valley Jainpur Enclave,<br>Ludhiana, Punjab 141008</div>
+        <a href="https://maps.app.goo.gl/S4bcuPQvybGiAJhJ7" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem;color:var(--waterfall-lt);margin-top:6px;display:inline-block;">
+          <i class="fas fa-external-link-alt" style="margin-right:4px;"></i>Open in Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="ci-icon"><i class="fas fa-phone"></i></div>
+      <div>
+        <div class="ci-label">Phone</div>
+        <div class="ci-value"><a href="tel:7829166666" style="color:var(--white)">+91 78291 66666</a></div>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+      <div>
+        <div class="ci-label">Email</div>
+        <div class="ci-value">hello@bythefalls.in<br>events@bythefalls.in</div>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="ci-icon"><i class="fas fa-clock"></i></div>
+      <div>
+        <div class="ci-label">Opening Hours</div>
+        <div class="hours-grid">
+          <span>Monday – Friday</span>
+          <span>12:00 – 23:30</span>
+          <span>Saturday</span>
+          <span>11:00 – 23:30</span>
+          <span>Sunday</span>
+          <span>11:00 – 23:00</span>
+          <span>Public Holidays</span>
+          <span>11:00 – 23:30</span>
+        </div>
+        <p style="font-size:0.72rem;color:var(--gold);margin-top:10px;"><i class="fas fa-info-circle"></i> Last orders 45 min before closing</p>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="ci-icon"><i class="fas fa-parking"></i></div>
+      <div>
+        <div class="ci-label">Parking</div>
+        <div class="ci-value">Complimentary valet &amp; self-parking available on premises</div>
+      </div>
+    </div>
+
+    <!-- WhatsApp quick message -->
+    <a href="https://wa.me/917829166666?text=Hello%20By%20The%20Falls%2C%20I%20would%20like%20to%20make%20a%20reservation." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" style="width:100%;justify-content:center;margin-top:8px;">
+      <i class="fab fa-whatsapp"></i> Message Us on WhatsApp
+    </a>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="contact-form-card reveal-right">
+    <h3>Send Us a <em style="font-style:italic;color:var(--gold)">Message</em></h3>
+    <p>Whether it's a reservation, an event enquiry, or just a warm hello — we'd love to hear from you.</p>
+
+    <form id="contactForm" novalidate aria-label="Contact form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Arjun" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Sharma" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="arjun@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 98765 43210" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" class="form-select">
+          <option value="" disabled selected>Select a subject</option>
+          <option value="reservation">Table Reservation</option>
+          <option value="event">Private Event Enquiry</option>
+          <option value="feedback">Feedback &amp; Reviews</option>
+          <option value="corporate">Corporate Dining</option>
+          <option value="wedding">Wedding Enquiry</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" class="form-input" />
+        </div>
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" class="form-input" placeholder="2" min="1" max="300" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your occasion, dietary requirements, special requests, or anything else you'd like us to know..." required></textarea>
+      </div>
+
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;border-radius:var(--radius);padding:16px;">
+        <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+      </button>
+      <p style="font-size:0.72rem;color:var(--white-dim);margin-top:14px;text-align:center;">
+        <i class="fas fa-lock" style="color:var(--gold);margin-right:4px;"></i>
+        Your information is safe with us and will never be shared with third parties.
+      </p>
+    </form>
+  </div>
+
+</section>
+
+<!-- GOOGLE MAP -->
+<div class="contact-map reveal" style="padding:0 5% 80px; max-width:1300px; margin:60px auto 0;">
+  <div class="section-label" style="justify-content:flex-start; margin-bottom:20px;">Find Us on the Map</div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3419.9!2d75.85!3d30.90!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a838e5cb8e9f9%3A0x0!2zMzDCsDU0JzAwLjAiTiA3NcKwNTEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+    allowfullscreen=""
+    loading="lazy"
+    title="By The Falls location"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+  <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:24px;">
+    <a href="https://maps.app.goo.gl/S4bcuPQvybGiAJhJ7" target="_blank" rel="noopener noreferrer" class="btn-primary">
+      <i class="fas fa-map-marker-alt"></i><span>Get Directions</span>
+    </a>
+    <a href="https://maps.app.goo.gl/S4bcuPQvybGiAJhJ7" target="_blank" rel="noopener noreferrer" class="btn-outline">
+      <i class="fab fa-google"></i><span>View on Google Maps</span>
+    </a>
+  </div>
+</div>
+
+<!-- RESERVATION FORM (FULL) -->
+<section style="padding:80px 5%; background:var(--charcoal);" id="reserve-form">
+  <div style="max-width:900px; margin:0 auto;">
+    <div class="reveal" style="text-align:center; margin-bottom:50px;">
+      <div class="section-label">Reserve Your Table</div>
+      <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,3rem);">Book a Table for an <em>Unforgettable Evening</em></h2>
+      <div class="gold-divider"></div>
+    </div>
+    <form id="resFormFull" class="reveal" style="background:var(--charcoal-2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:44px;" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="rName">Full Name *</label>
+          <input type="text" id="rName" class="form-input" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="rPhone">Phone Number *</label>
+          <input type="tel" id="rPhone" class="form-input" placeholder="+91 XXXXX XXXXX" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="rDate">Date *</label>
+          <input type="date" id="rDate" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label for="rTime">Preferred Time *</label>
+          <select id="rTime" class="form-select" required>
+            <option value="" disabled selected>Select time</option>
+            <option>12:00 PM (Lunch)</option>
+            <option>01:00 PM</option>
+            <option>02:00 PM</option>
+            <option>07:00 PM (Dinner)</option>
+            <option>07:30 PM</option>
+            <option>08:00 PM</option>
+            <option>08:30 PM</option>
+            <option>09:00 PM</option>
+            <option>09:30 PM</option>
+            <option>10:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="rGuests">Number of Guests *</label>
+          <input type="number" id="rGuests" class="form-input" placeholder="2" min="1" max="200" required />
+        </div>
+        <div class="form-group">
+          <label for="rOccasion">Occasion</label>
+          <select id="rOccasion" class="form-select">
+            <option value="" disabled selected>Select occasion</option>
+            <option>Regular Dining</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+            <option>Romantic Dinner</option>
+            <option>Business Lunch</option>
+            <option>Family Gathering</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="rSpecial">Special Requests</label>
+        <textarea id="rSpecial" class="form-textarea" style="min-height:90px;" placeholder="Any dietary requirements, seating preferences, decorations, or special requests..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;border-radius:var(--radius);padding:16px;">
+        <i class="fas fa-calendar-check"></i><span>Confirm My Reservation</span>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- SOCIAL CONTACT -->
+<section class="social-contact">
+  <div class="social-contact-inner reveal">
+    <div class="section-label">Stay Connected</div>
+    <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,2.8rem);">Follow Our <em>Journey</em></h2>
+    <div class="gold-divider"></div>
+    <p class="section-desc" style="margin:0 auto;">Stay up-to-date with our latest dishes, events, and moments. Tag us @bythefalls_ludhiana for a chance to be featured.</p>
+    <div class="soc-grid">
+      <a href="#" class="soc-card fb" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+        <span>Facebook</span>
+      </a>
+      <a href="#" class="soc-card ig" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+        <span>Instagram</span>
+      </a>
+      <a href="https://wa.me/917829166666" class="soc-card wa" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+      <a href="#" class="soc-card yt" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+        <span>YouTube</span>
+      </a>
+      <a href="#" class="soc-card tw" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+        <span>Twitter</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-logo">
+      <div class="logo-script">By The Falls</div>
+      <div class="logo-tagline">By CM Valley · Ludhiana</div>
+      <p>A haven of fine dining where nature's grandeur meets culinary artistry. Join us for an evening you'll treasure forever.</p>
+      <div class="footer-social">
+        <a href="#" class="soc-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="soc-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="soc-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/917829166666" class="soc-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Our Menu</a></li><li><a href="gallery.html">Gallery</a></li>
+      <li><a href="events.html">Private Events</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Hours</h5>
+      <p style="font-size:0.82rem;color:var(--white-dim);line-height:2.2;">
+        Mon – Fri &nbsp;&nbsp;&nbsp;<span style="color:var(--gold)">12:00 – 23:30</span><br>
+        Saturday &nbsp;&nbsp;<span style="color:var(--gold)">11:00 – 23:30</span><br>
+        Sunday &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:var(--gold)">11:00 – 23:00</span>
+      </p>
+    </div>
+    <div class="footer-col"><h5>Contact</h5>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>CM Valley Jainpur Enclave,<br>Ludhiana, Punjab 141008</span></div>
+      <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:7829166666" style="color:inherit">+91 78291 66666</a></span></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>hello@bythefalls.in</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 By The Falls By CM Valley. All Rights Reserved.</p>
+    <p>Crafted with <i class="fas fa-heart" style="color:var(--gold)"></i> in Ludhiana, Punjab</p>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-btns">
+  <a href="#reserve" class="float-btn reserve" aria-label="Reserve a Table">Reserve</a>
+  <a href="https://wa.me/917829166666" class="float-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:7829166666" class="float-btn call" aria-label="Call us"><i class="fas fa-phone"></i></a>
+</div>
+<button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="script.js"></script>
+<script>
+  // Full reservation form handling
+  const resFormFull = document.getElementById('resFormFull');
+  if (resFormFull) {
+    resFormFull.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = resFormFull.querySelector('[type="submit"]');
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-check-circle"></i><span>Table Reserved! We\'ll confirm shortly.</span>';
+      btn.style.background = '#4CAF50';
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = '';
+        resFormFull.reset();
+      }, 4000);
+    });
+  }
+</script>
+</body>
+</html>

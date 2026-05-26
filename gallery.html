@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | By The Falls By CM Valley</title>
+  <meta name="description" content="Explore the visual world of By The Falls — cinematic food photography, romantic ambience, waterfall views, and luxury dining moments in Ludhiana, Punjab." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero-bg {
+      background:
+        linear-gradient(to bottom, rgba(10,10,10,0.5), rgba(10,10,10,0.75)),
+        url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80') center/cover;
+    }
+    /* Gallery counter strip */
+    .gallery-strip {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      padding: 40px 5%;
+      background: var(--charcoal);
+      border-bottom: 1px solid var(--charcoal-3);
+      flex-wrap: wrap;
+    }
+    .strip-item { text-align: center; }
+    .strip-num {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .strip-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--white-dim);
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-logo">By The Falls</div><div class="loader-bar"></div></div>
+<div class="page-transition"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo"><a href="index.html"><span class="logo-script">By The Falls</span><span class="logo-sub">By CM Valley · Ludhiana</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="menu.html">Menu</a></li><li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html#reserve" class="nav-reserve">Reserve a Table</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<nav class="mobile-nav">
+  <div class="mobile-gold-line"></div>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a><a href="events.html">Events</a><a href="contact.html">Contact</a>
+  <div class="mobile-gold-line"></div>
+  <a href="contact.html#reserve" style="color:var(--gold)">Reserve a Table</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="section-label">Visual Stories</div>
+    <h1>Our <em style="font-style:italic;color:var(--gold)">Gallery</em></h1>
+    <p>Memories captured · Moments treasured</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span style="color:var(--gold);margin:0 6px">/</span>
+      <span>Gallery</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="gallery-strip">
+  <div class="strip-item">
+    <div class="strip-num counter-num" data-suffix="+">2000</div>
+    <div class="strip-label">Memorable Evenings</div>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num counter-num" data-suffix="+">150</div>
+    <div class="strip-label">Signature Dishes</div>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num counter-num" data-suffix="+">500</div>
+    <div class="strip-label">Events Hosted</div>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num counter-num" data-suffix="★">4.9</div>
+    <div class="strip-label">Average Rating</div>
+  </div>
+</div>
+
+<!-- GALLERY SECTION -->
+<section class="gallery-section">
+  <div class="reveal" style="text-align:center; margin-bottom:40px;">
+    <div class="section-label">Through Our Lens</div>
+    <h2 class="section-title">Where Every Frame Tells a <em>Story</em></h2>
+    <div class="gold-divider"></div>
+    <p class="section-desc" style="margin:0 auto;">From candlelit dinners to waterfall vistas, from artisan desserts to joyous celebrations — this is the world of By The Falls.</p>
+  </div>
+
+  <!-- FILTER TABS -->
+  <div class="gallery-filter">
+    <button class="tab-btn active" data-cat="all">All</button>
+    <button class="tab-btn" data-cat="ambience">Ambience</button>
+    <button class="tab-btn" data-cat="food">Food</button>
+    <button class="tab-btn" data-cat="events">Events</button>
+    <button class="tab-btn" data-cat="nature">Nature &amp; Views</button>
+    <button class="tab-btn" data-cat="drinks">Drinks</button>
+  </div>
+
+  <!-- MASONRY GRID -->
+  <div class="masonry-grid">
+
+    <!-- Ambience -->
+    <div class="masonry-item" data-cat="ambience">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Elegant restaurant interior" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <div class="masonry-item" data-cat="ambience">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Romantic candlelit table" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Food -->
+    <div class="masonry-item" data-cat="food">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Signature dish plating" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <div class="masonry-item" data-cat="food">
+      <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80" alt="Butter chicken" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Nature -->
+    <div class="masonry-item" data-cat="nature">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Waterfall views" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Ambience -->
+    <div class="masonry-item" data-cat="ambience">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Restaurant lounge" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Food -->
+    <div class="masonry-item" data-cat="food">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Dessert presentation" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Events -->
+    <div class="masonry-item" data-cat="events">
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Birthday celebration" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="masonry-item" data-cat="drinks">
+      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80" alt="Handcrafted mocktails" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Nature -->
+    <div class="masonry-item" data-cat="nature">
+      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" alt="Valley landscape" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Food -->
+    <div class="masonry-item" data-cat="food">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80" alt="Fresh gourmet salad" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Ambience -->
+    <div class="masonry-item" data-cat="ambience">
+      <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=600&q=80" alt="Chef at work" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Events -->
+    <div class="masonry-item" data-cat="events">
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" alt="Wedding reception setup" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="masonry-item" data-cat="drinks">
+      <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80" alt="Blue mocktail" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Food -->
+    <div class="masonry-item" data-cat="food">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Artisan pizza" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Nature -->
+    <div class="masonry-item" data-cat="nature">
+      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80" alt="Green valley morning" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Ambience -->
+    <div class="masonry-item" data-cat="ambience">
+      <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&q=80" alt="Luxury dining hall" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Events -->
+    <div class="masonry-item" data-cat="events">
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80" alt="Corporate dinner" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Food -->
+    <div class="masonry-item" data-cat="food">
+      <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80" alt="Biryani served" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="masonry-item" data-cat="drinks">
+      <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=600&q=80" alt="Rose mojito" loading="lazy" />
+      <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+    </div>
+
+  </div><!-- /masonry-grid -->
+
+  <!-- CTA below gallery -->
+  <div class="reveal" style="text-align:center;margin-top:60px;">
+    <p style="font-size:0.82rem;color:var(--white-dim);margin-bottom:1.5rem;">Want to be part of our story? Tag us on Instagram <span style="color:var(--gold)">@bythefalls_ludhiana</span></p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html#reserve" class="btn-primary"><span>Reserve a Table</span></a>
+      <a href="events.html" class="btn-outline"><span>Plan an Event</span></a>
+    </div>
+  </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <span class="lb-close" title="Close" aria-label="Close lightbox"><i class="fas fa-times"></i></span>
+  <button class="lb-arrow prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+  <img src="" alt="Gallery image enlarged" />
+  <button class="lb-arrow next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-logo">
+      <div class="logo-script">By The Falls</div>
+      <div class="logo-tagline">By CM Valley · Ludhiana</div>
+      <p>A haven of fine dining where nature's grandeur meets culinary artistry. Join us for an evening you'll treasure forever.</p>
+      <div class="footer-social">
+        <a href="#" class="soc-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="soc-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="soc-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/917829166666" class="soc-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Quick Links</h5><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Our Menu</a></li><li><a href="gallery.html">Gallery</a></li>
+      <li><a href="events.html">Private Events</a></li><li><a href="contact.html">Contact Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Gallery Categories</h5><ul>
+      <li><a href="gallery.html">All Photos</a></li>
+      <li><a href="gallery.html">Ambience &amp; Interior</a></li>
+      <li><a href="gallery.html">Food &amp; Drinks</a></li>
+      <li><a href="gallery.html">Events &amp; Celebrations</a></li>
+      <li><a href="gallery.html">Nature &amp; Views</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Contact</h5>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>CM Valley Jainpur Enclave,<br>Ludhiana, Punjab 141008</span></div>
+      <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:7829166666" style="color:inherit">+91 78291 66666</a></span></div>
+      <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon – Sun: 12:00 PM – 11:30 PM</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 By The Falls By CM Valley. All Rights Reserved.</p>
+    <p>Crafted with <i class="fas fa-heart" style="color:var(--gold)"></i> in Ludhiana, Punjab</p>
+  </div>
+</footer>
+
+<div class="float-btns">
+  <a href="contact.html#reserve" class="float-btn reserve" aria-label="Reserve a Table">Reserve</a>
+  <a href="https://wa.me/917829166666" class="float-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:7829166666" class="float-btn call" aria-label="Call us"><i class="fas fa-phone"></i></a>
+</div>
+<button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>

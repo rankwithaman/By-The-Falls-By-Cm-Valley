@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | By The Falls By CM Valley</title>
+  <meta name="description" content="Explore the exquisite menu at By The Falls — featuring Indian, Chinese, Italian, starters, desserts, drinks and mocktails in Ludhiana, Punjab." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero-bg {
+      background:
+        linear-gradient(to bottom, rgba(10,10,10,0.5), rgba(10,10,10,0.75)),
+        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80') center/cover;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-logo">By The Falls</div><div class="loader-bar"></div></div>
+<div class="page-transition"></div>
+
+<nav id="navbar">
+  <div class="nav-logo"><a href="index.html"><span class="logo-script">By The Falls</span><span class="logo-sub">By CM Valley · Ludhiana</span></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="menu.html" class="active">Menu</a></li><li><a href="gallery.html">Gallery</a></li>
+    <li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html#reserve" class="nav-reserve">Reserve a Table</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<nav class="mobile-nav">
+  <div class="mobile-gold-line"></div>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a><a href="events.html">Events</a><a href="contact.html">Contact</a>
+  <div class="mobile-gold-line"></div>
+  <a href="contact.html#reserve" style="color:var(--gold)">Reserve a Table</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="section-label">Culinary Excellence</div>
+    <h1>Our <em style="font-style:italic;color:var(--gold)">Menu</em></h1>
+    <p>Crafted with passion · Inspired by the world</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span style="color:var(--gold);margin:0 6px">/</span><span>Menu</span></div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="reveal" style="text-align:center">
+    <div class="section-label">What We Serve</div>
+    <h2 class="section-title">A Journey of <em>Tastes &amp; Textures</em></h2>
+    <div class="gold-divider"></div>
+    <p class="section-desc" style="margin:0 auto;">Every dish on our menu is a testament to our culinary team's passion — from the first bite to the last.</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="menu-tabs">
+    <button class="tab-btn active" data-cat="all">All</button>
+    <button class="tab-btn" data-cat="starters">Starters</button>
+    <button class="tab-btn" data-cat="main">Main Course</button>
+    <button class="tab-btn" data-cat="chinese">Chinese</button>
+    <button class="tab-btn" data-cat="indian">Indian</button>
+    <button class="tab-btn" data-cat="italian">Italian</button>
+    <button class="tab-btn" data-cat="desserts">Desserts</button>
+    <button class="tab-btn" data-cat="drinks">Drinks</button>
+    <button class="tab-btn" data-cat="mocktails">Mocktails</button>
+  </div>
+
+  <div class="menu-grid">
+
+    <!-- STARTERS -->
+    <div class="menu-item" data-cat="starters">
+      <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=500&q=80" alt="Paneer Tikka" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Starters</div>
+        <div class="menu-item-name">Signature Paneer Tikka</div>
+        <div class="menu-item-desc">Hand-pressed paneer cubes marinated overnight in saffron yogurt and char-grilled in a tandoor to golden perfection.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹320</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="starters">
+      <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=500&q=80" alt="Chicken Wings" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Starters</div>
+        <div class="menu-item-name">Smoked Chicken Wings</div>
+        <div class="menu-item-desc">Juicy wings slow-smoked with applewood chips, glazed in our house chilli-honey sauce, served with blue cheese dip.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹380</span><span class="veg-badge non">Non-Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="starters">
+      <img src="https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?w=500&q=80" alt="Soup" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Starters</div>
+        <div class="menu-item-name">Golden Lentil Shorba</div>
+        <div class="menu-item-desc">A royal lentil broth infused with turmeric, ginger, and cream, finished with crispy shallots and fresh herb oil.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹220</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="menu-item" data-cat="main">
+      <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=80" alt="Butter Chicken" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Main Course</div>
+        <div class="menu-item-name">Royal Butter Chicken</div>
+        <div class="menu-item-desc">Tender chicken in velvety tomato-cream gravy with artisan spices and saffron. Served with garlic naan.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹480</span><span class="veg-badge non">Non-Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="main indian">
+      <img src="https://images.unsplash.com/photo-1631515242808-497c3fbd3972?w=500&q=80" alt="Dal Makhani" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Main Course · Indian</div>
+        <div class="menu-item-name">Midnight Dal Makhani</div>
+        <div class="menu-item-desc">Black lentils slow-cooked for 8 hours on a wood fire, enriched with cream and butter. A dish born from patience.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹340</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <!-- CHINESE -->
+    <div class="menu-item" data-cat="chinese">
+      <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=500&q=80" alt="Noodles" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Chinese</div>
+        <div class="menu-item-name">Dragon Fire Noodles</div>
+        <div class="menu-item-desc">Wok-tossed with seasonal vegetables in smoky Szechuan sauce. The flame is the secret ingredient.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹360</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="chinese">
+      <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=500&q=80" alt="Fried Rice" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Chinese</div>
+        <div class="menu-item-name">Emperor's Fried Rice</div>
+        <div class="menu-item-desc">Jasmine rice wok-fried with egg, spring onions, shiitake mushrooms, and our house soy-sesame blend.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹320</span><span class="veg-badge non">Non-Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="chinese">
+      <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500&q=80" alt="Manchurian" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Chinese</div>
+        <div class="menu-item-name">Velvet Manchurian</div>
+        <div class="menu-item-desc">Crispy-fried vegetable dumplings in a rich, glossy manchurian sauce. A restaurant classic reinvented.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹290</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <!-- INDIAN -->
+    <div class="menu-item" data-cat="indian">
+      <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=500&q=80" alt="Biryani" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Indian</div>
+        <div class="menu-item-name">Dum Gosht Biryani</div>
+        <div class="menu-item-desc">Slow-cooked lamb with aged basmati rice, whole spices, and saffron. Sealed and cooked in a traditional dum style.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹580</span><span class="veg-badge non">Non-Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="indian">
+      <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&q=80" alt="Rogan Josh" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Indian</div>
+        <div class="menu-item-name">Kashmiri Rogan Josh</div>
+        <div class="menu-item-desc">A Kashmiri heritage recipe — lamb braised in a fragrant, vibrantly red gravy of Kashmiri chillies and whole spices.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹520</span><span class="veg-badge non">Non-Veg</span></div>
+    </div>
+
+    <!-- ITALIAN -->
+    <div class="menu-item" data-cat="italian">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Pizza" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Italian</div>
+        <div class="menu-item-name">Truffle Margherita</div>
+        <div class="menu-item-desc">Wood-fired thin crust, San Marzano tomatoes, buffalo mozzarella, fresh basil, and a drizzle of black truffle oil.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹520</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="italian">
+      <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&q=80" alt="Pasta" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Italian</div>
+        <div class="menu-item-name">Lobster Tagliolini</div>
+        <div class="menu-item-desc">Hand-rolled pasta with butter-poached lobster, cherry tomatoes, and a bisque reduction with fresh tarragon.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹780</span><span class="veg-badge non">Non-Veg</span></div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="menu-item" data-cat="desserts">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80" alt="Gulab Jamun" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Desserts</div>
+        <div class="menu-item-name">Gold Leaf Gulab Jamun</div>
+        <div class="menu-item-desc">Warm syrup-soaked dumplings crowned with edible gold leaf, cardamom cream, and pistachio crumble.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹220</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="desserts">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80" alt="Chocolate Lava Cake" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Desserts</div>
+        <div class="menu-item-name">Dark Chocolate Lava Cake</div>
+        <div class="menu-item-desc">Warm Belgian chocolate cake with a liquid centre, served with Madagascan vanilla bean ice cream.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹280</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="desserts">
+      <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&q=80" alt="Tiramisu" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Desserts · Italian</div>
+        <div class="menu-item-name">By The Falls Tiramisu</div>
+        <div class="menu-item-desc">Espresso-soaked ladyfingers layered with mascarpone, dusted with Dominican cocoa and cardamom.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹260</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="menu-item" data-cat="drinks">
+      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&q=80" alt="Cocktails" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Drinks</div>
+        <div class="menu-item-name">Valley Mist Lemonade</div>
+        <div class="menu-item-desc">Freshly pressed lemon, ginger syrup, sparkling water, and a sprig of mint — crisp, refreshing, and uplifting.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹180</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="drinks">
+      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&q=80" alt="Juice" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Drinks</div>
+        <div class="menu-item-name">Tropical Sunrise Blend</div>
+        <div class="menu-item-desc">A vibrant blend of mango, passion fruit, pineapple, and coconut water — liquid sunshine in a glass.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹200</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <!-- MOCKTAILS -->
+    <div class="menu-item" data-cat="mocktails">
+      <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=500&q=80" alt="Mocktail" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Mocktails</div>
+        <div class="menu-item-name">Waterfall Breeze</div>
+        <div class="menu-item-desc">Blue curaçao, lychee juice, mint, lime, and soda — our signature mocktail inspired by the cascading falls.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹240</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="mocktails">
+      <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=500&q=80" alt="Rose Mojito" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Mocktails</div>
+        <div class="menu-item-name">Royal Rose Mojito</div>
+        <div class="menu-item-desc">Rose syrup, fresh lime, muddled mint, cucumber, and sparkling water — elegant, floral, and refreshing.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹220</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+    <div class="menu-item" data-cat="mocktails">
+      <img src="https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=500&q=80" alt="Berry Mocktail" class="menu-item-img" loading="lazy" />
+      <div class="menu-item-body">
+        <div class="menu-item-tag">Mocktails</div>
+        <div class="menu-item-name">Midnight Berry Fizz</div>
+        <div class="menu-item-desc">Mixed berry compote, lavender syrup, fresh lime, and premium tonic water. Dark, mysterious, and utterly delicious.</div>
+      </div>
+      <div class="menu-item-footer"><span class="menu-item-price">₹250</span><span class="veg-badge veg">Veg</span></div>
+    </div>
+
+  </div><!-- /menu-grid -->
+
+  <!-- Note -->
+  <div class="reveal" style="text-align:center;margin-top:50px;padding:28px;background:var(--charcoal);border-radius:var(--radius-lg);border:1px solid var(--glass-border);">
+    <p style="font-size:0.78rem;color:var(--white-dim);">
+      <i class="fas fa-info-circle" style="color:var(--gold);margin-right:8px;"></i>
+      All prices are inclusive of GST. Menu items and prices may vary by season. For special dietary requirements or allergies, please inform your server.
+      <br>Complimentary bread basket with every main course. Minimum order for 2 persons.
+    </p>
+  </div>
+
+</section>
+
+<!-- Reserve CTA -->
+<section class="reservation-cta" style="padding:70px 5%;text-align:center;">
+  <div class="reveal">
+    <div class="section-label">Ready to Dine?</div>
+    <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,3rem);">Reserve Your Table &amp; Enjoy <em>These Creations</em> Tonight</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
+      <a href="contact.html#reserve" class="btn-primary"><span>Book a Table</span></a>
+      <a href="tel:7829166666" class="btn-outline"><i class="fas fa-phone"></i> <span>+91 78291 66666</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-logo">
+      <div class="logo-script">By The Falls</div>
+      <div class="logo-tagline">By CM Valley · Ludhiana</div>
+      <p>A haven of fine dining where nature's grandeur meets culinary artistry.</p>
+      <div class="footer-social">
+        <a href="#" class="soc-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="soc-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/917829166666" class="soc-icon"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Menu Categories</h5><ul>
+      <li><a href="menu.html">All Dishes</a></li><li><a href="menu.html">Starters</a></li>
+      <li><a href="menu.html">Main Course</a></li><li><a href="menu.html">Chinese</a></li>
+      <li><a href="menu.html">Desserts</a></li><li><a href="menu.html">Mocktails</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Quick Links</h5><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+      <li><a href="gallery.html">Gallery</a></li><li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Contact</h5>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>CM Valley Jainpur Enclave, Ludhiana, Punjab 141008</span></div>
+      <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:7829166666" style="color:inherit">+91 78291 66666</a></span></div>
+      <div class="footer-contact-item"><i class="fas fa-clock"></i><span>12:00 PM – 11:30 PM Daily</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 By The Falls By CM Valley. All Rights Reserved.</p>
+    <p>Crafted with <i class="fas fa-heart" style="color:var(--gold)"></i> in Ludhiana</p>
+  </div>
+</footer>
+
+<div class="float-btns">
+  <a href="contact.html#reserve" class="float-btn reserve">Reserve</a>
+  <a href="https://wa.me/917829166666" class="float-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:7829166666" class="float-btn call"><i class="fas fa-phone"></i></a>
+</div>
+<button id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+<script src="script.js"></script>
+</body>
+</html>
